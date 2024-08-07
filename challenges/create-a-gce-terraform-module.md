@@ -4,7 +4,12 @@ In this challenge, you will be creating a Google Compute Instance using Terrafor
 
 ## Challenge
 
-1. The module should be able to create a Google Compute Instance.
-2. The module should have variables for location/region, project_id, and machine type
-3. The module should output the project, instance name, and location/regions
-4. You should be able to run terraform commands to validate the resources, and to see what changes will take place when applied
+1. Create resource definitions, variables, and outputs
+   1. Create a Google Project
+   2. Enable the Compute Engine API
+   3. Create a Google Compute Instance.
+   4. Add inputs for `zone`, `image`, and `machine_type`
+   5. Add outputs for `project_id `, `instance name`, and `zone`.
+   6. The instance should be created in the `us-central1-a` zone.
+   7. The machine type should be `n1-standard-1`.
+2. Run Terraform commands to verify the module, and to see what resources will be created.
