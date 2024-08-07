@@ -1,10 +1,10 @@
 # DevOps Interview Code Challenges
 
-This repository contains a collection of code challenges that are to be used as a part of an interview process. The challenges are detailed within individual markdown files located inside of [challenges](challenges) directory. Each challenge contains a set of requirements and a description of the challenge.
+This repository contains a collection of code challenges to gauge candidates skill level in very targeted areas. The challenges are detailed within individual markdown files located inside of [challenges](challenges) directory. Each challenge contains a set of requirements and a description of the challenge.
 
 ## Prerequisites
 
-To perform this task, you will need to have installed the relevant CLI tools for Git, Terraform, Kubernetes, and Helm. Also, this codebase will need to be cloned locally using git.
+To perform the challenges contained in this repo, relevant CLI tools for Git, Terraform, Kubernetes, and Helm will need to be installed. This repo will need to be cloned down locally to perform the challenges.
 
 ## Challenges
 
