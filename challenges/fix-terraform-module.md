@@ -4,15 +4,17 @@ Use Terraform and Google provider doucmentation and your experiences to fix the 
 
 ## Module Requirements
 
+This module should do the following:
+
  - Create a Google Cloud project
+- Enable APIs using a `google_project_service` resource, will need to enable `storage.googleapis.com` and `pubsub.googleapis.com`
  - Create a Google Cloud service account
- - Enable APIs using a google_project_service resource, will need to enable storage.googleapis.com and pubsub.googleapis.com
  - Assign the service account the role of Pub/Sub Publisher on the project
- - Resource consuming Google APIs should wait for APIs to be enabled before creating resources
+ - Have proper dependencies between resources, such as ones that require an API to be enabled first before creation
  - The resources should have outputs associated with them
  - The module should have appropriate version/providers requirements
- - The location variable shouldnt prompt for input, and instead use terraform mechanisms to set the value for the variable before running terraform commands
- - When terraform runs on the default workspace, it should name the resources accordingly with the env. 
+ - The location variable shouldn't prompt for input, and instead use Terraform mechanisms to set the value for the variable before running Terraform commands
+ - When Terraform runs on the default workspace, it should name the resources accordingly with the env. 
 
 ## Bonus Points
 

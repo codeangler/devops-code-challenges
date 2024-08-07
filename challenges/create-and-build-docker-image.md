@@ -5,5 +5,7 @@ Using tools and information available on the web, create a Dockerfile and build 
 ## Challenge
 
 1. Create a Dockerfile that uses one of the `alpine` images as a base image.
-2. Expose port 8080
-3. Run command `echo "Hello, World!"` when the container starts
+   1. Expose port 8080
+   2. Run command `echo "Hello, World!"` when the container starts
+2. Build the Docker image
+3. Run the Docker container
