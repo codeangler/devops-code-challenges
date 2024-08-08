@@ -12,4 +12,4 @@ To perform the challenges contained in this repo, relevant CLI tools for Git, te
 2. [Create a Google Compute Instance terraform Module](challenges/create-a-gce-terraform-module.md)
 3. [K8S Resource Creation](challenges/k8s-resource-creation.md)
 4. [Create a Helm Chart](challenges/create-a-helm-chart.md)
-5. [Create and Build a Docker Image](challenges/create-and-build-docker-image.md)
+5. [Build Docker Image From Dockerfile and Run](challenges/build-docker-image-from-dockerfile-and-run.md)

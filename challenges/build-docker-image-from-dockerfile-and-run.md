@@ -1,4 +1,4 @@
-# Create and Build Docker Image
+# Build Docker Image From Dockerfile and Run
 
 Using tools and information available on the web, create a Dockerfile and build a Docker image.
 
