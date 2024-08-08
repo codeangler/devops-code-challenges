@@ -9,4 +9,7 @@ Using tools and information available on the web, create a Dockerfile and build 
    2. Install python3
    3. Run command `echo "Hello, World!"` when the container starts
 2. Build the Docker image
-3. Run the Docker container to verify the output
+
+## Validation
+
+- Run the Docker container to verify the output
