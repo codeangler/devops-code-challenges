@@ -1,17 +1,18 @@
 # CODE CHALLENGE: Use Terraform and Google provider doucmentation and your experiences to fix the following terraform module.
 # You can use Google search, documentation, and terraform commands to help you fix the module.
 #
-# This module should:
-# - Create a Google Cloud project
-# - Create a Google Cloud service account
-# - Enable APIs using a google_project_service resource, will need to enable storage.googleapis.com and pubsub.googleapis.com
-# - Assign the service account the role of Pub/Sub Publisher on the project
-# - Resource consuming Google APIs should wait for APIs to be enabled before creating resources
+# This module should meet the following requirements:
+#
+# - Create a Google Cloud project titled `a-project`
+# - Enable Google APIs: `storage.googleapis.com` and `pubsub.googleapis.com`
+# - Create a Google service account
+# - Assign the service account the role of Pub/Sub Publisher in the project
+# - Have proper dependencies between resources, such as ones that require an API to be enabled first before creation
 # - The resources should have outputs associated with them
-# - The module should have appropriate version/providers requirements
-# - The location variable shouldnt prompt for input, and instead use terraform mechanisms to set the value for the variable before running terraform commands
+# - The module should have appropriate version/providers requirements for terraform modules
+# - The location variable shouldn't prompt for input, and instead use terraform mechanisms to set the value for the variable before running terraform commands
 # - When terraform runs on the default workspace, it should name the resources accordingly with the env. 
-# - Bonus points if you can add a resource in that will ensure the google storage bucket name is globally unique
+#
 
 locals {
   env = terraform.workspace == "prod" ? "p" : "np"
