@@ -8,8 +8,8 @@ To perform the challenges contained in this repo, relevant CLI tools for Git, te
 
 ## Challenges
 
-- [Debug and Fix terraform Module](challenges/fix-terraform-module.md)
-- [Create a Google Compute Instance terraform Module](challenges/create-a-gce-terraform-module.md)
-- [K8S Resource Creation](challenges/k8s-resource-creation.md)
-- [Create a Helm Chart](challenges/create-a-helm-chart.md)
-- [Create and Build a Docker Image](challenges/create-and-build-docker-image.md)
+1. [Debug and Fix terraform Module](challenges/fix-terraform-module.md)
+2. [Create a Google Compute Instance terraform Module](challenges/create-a-gce-terraform-module.md)
+3. [K8S Resource Creation](challenges/k8s-resource-creation.md)
+4. [Create a Helm Chart](challenges/create-a-helm-chart.md)
+5. [Create and Build a Docker Image](challenges/create-and-build-docker-image.md)
