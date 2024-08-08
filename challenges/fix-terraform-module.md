@@ -11,7 +11,7 @@ This module should meet the following requirements:
 - Have variables for the `location` (string) and `google_org_id` (string), values should be:
   - `location` = "us-central1"
   - `google_org_id` = "123456789"
-- Set locals definition for `env` to switch between "p" and "np" based off of the terraform workspace name
+- Set locals definition for `env` to switch between `p` and `np` based off of the terraform workspace name
 - Create a Google project titled `a-project`, with the provided `google_org_id` value as the org_id for the Google project resource
 - Enable Google APIs: `storage.googleapis.com` and `pubsub.googleapis.com`
 - Create a GCS bucket with the name `a-gcs-bucket` and the provided `location` value
