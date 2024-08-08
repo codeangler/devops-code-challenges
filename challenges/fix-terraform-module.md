@@ -2,6 +2,8 @@
 
 Use terraform and Google provider doucmentation and your experiences to fix the [fix-this-terraform-module](./fix-this-terraform-module/) terraform module contained in this repo. You can use Google search, documentation, and terraform commands to help you fix the module.
 
+Note: The default workspace is considered production, and any other workspace is considered non-production.
+
 ## Module Requirements
 
 This module meet the following requirements:
@@ -9,6 +11,7 @@ This module meet the following requirements:
 - Have variables for the `location` (string) and `google_org_id` (string), values should be:
   - `location` = "us-central1"
   - `google_org_id` = "123456789"
+- Set locals definition for `env` to switch between "p" and "np" based off of the terraform workspace name
 - Create a Google project titled `a-project`, with the provided `google_org_id` value as the org_id for the Google project resource
 - Enable Google APIs: `storage.googleapis.com` and `pubsub.googleapis.com`
 - Create a GCS bucket with the name `a-gcs-bucket` and the provided `location` value

@@ -1,11 +1,14 @@
 # CODE CHALLENGE: Use Terraform and Google provider doucmentation and your experiences to fix the following terraform module.
 # You can use Google search, documentation, and terraform commands to help you fix the module.
 #
+# Note: The default workspace is considered production, and any other workspace is considered non-production.
+#
 # This module should meet the following requirements:
 #
 # - Have variables for the location (string) and google_org_id (string), values should be:
 #   - `location` = "us-central1"
 #   - `google_org_id` = "123456789"
+# - Set locals definition for env to switch between "p" and "np" based off of the terraform workspace name
 # - Create a Google Cloud project titled `a-project`, with the provided `google_org_id` value as the org_id for the resource
 # - Enable Google APIs: `storage.googleapis.com` and `pubsub.googleapis.com`
 # - Create a GCS bucket with the name `a-gcs-bucket` and the provided `location` value
@@ -24,7 +27,7 @@ locals {
 
 # enable google APIs
 resource "google_project_service" "apis" {
-  project = google_project.service.project_id
+  project = google_project.project.project_id
   service = each.value
   for_each = toset([
     "storage.googleapis.com",
@@ -53,4 +56,9 @@ resource "google_storage_bucket" "bucket" {
   name     = "a-gcs-bucket-${local.env}"
   location = var.location
   project  = google_project.project.project_id
+}
+
+resource "google_pubsub_topic" "topic" {
+  name = "a-pubsub-topic-${local.env}"
+  project = google_project.project.project_id
 }
