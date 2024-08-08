@@ -25,7 +25,7 @@ This module should meet the following requirements:
 
 ## Bonus Points
 
- - add a resource in that will ensure the Google Storage Bucket's name is globally unique
+ - add a resource in that will ensure the Google Storage Bucket's name is globally unique and randomized
 
 ## Validation
 
