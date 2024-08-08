@@ -8,6 +8,7 @@
 #   - `google_org_id` = "123456789"
 # - Create a Google Cloud project titled `a-project`, with the provided `google_org_id` value as the org_id for the resource
 # - Enable Google APIs: `storage.googleapis.com` and `pubsub.googleapis.com`
+# - Create a GCS bucket with the name `a-gcs-bucket` and the provided `location` value
 # - Create a Google service account
 # - Assign the service account `roles/pubsub.publisher` and `roles/storage.objectAdmin` in the project
 # - Have explicit/implicit dependencies between related resources, such as ones that require an API to be enabled first before creation
@@ -32,7 +33,7 @@ resource "google_project_service" "apis" {
 
 # create a google service account
 resource "google_service_account" "account" {
-  account_id   = "a-google-account-${local.env}"
+  account_id   = "an-account-${local.env}"
   display_name = "Google Service Account For Code Challenge"
   project      = google_project.project.project_id
 }
@@ -49,7 +50,7 @@ resource "google_project_iam_member" "roles" {
 
 # create a storage bucket
 resource "google_storage_bucket" "bucket" {
-  name     = "a-google-bucket-${local.env}"
+  name     = "a-gcs-bucket-${local.env}"
   location = var.location
   project  = google_project.project.project_id
 }

@@ -11,6 +11,7 @@ This module meet the following requirements:
   - `google_org_id` = "123456789"
 - Create a Google Cloud project titled `a-project`, with the provided `google_org_id` value as the org_id for the resource
 - Enable Google APIs: `storage.googleapis.com` and `pubsub.googleapis.com`
+- Create a GCS bucket with the name `a-gcs-bucket` and the provided `location` value
 - Create a Google service account
 - Assign the service account `roles/pubsub.publisher` and `roles/storage.objectAdmin` in the project
 - Have explicit/implicit dependencies between related resources, such as ones that require an API to be enabled first before creation
