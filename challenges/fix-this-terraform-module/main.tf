@@ -44,7 +44,7 @@ resource "google_project_iam_member" "roles" {
   for_each = toset([
     "roles/storage.objectAdmin",
   ])
-  member  = "serviceAccount:${google_service_account.account.email}"
+  member = "serviceAccount:${google_service_account.account.email}"
 }
 
 # create a storage bucket

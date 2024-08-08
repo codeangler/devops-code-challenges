@@ -22,3 +22,12 @@ This module meet the following requirements:
 ## Bonus Points
 
  - add a resource in that will ensure the Google Storage Bucket's name is globally unique
+
+## Validation
+
+After fixing the module, use terraform cli commands to validate the changes.
+
+1. Plan to see what resources will be created
+2. Validate
+3. Create a new workspace and switch to it from the default workspace
+4. Plan to see what resources will be created and check resource differences from the default workspace
