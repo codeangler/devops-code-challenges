@@ -5,12 +5,19 @@ In this challenge, you will be creating a Google Compute Instance using Terrafor
 ## Challenge
 
 1. Create resource definitions, variables, and outputs
-   1. Create a Google Project
-   2. Enable Compute Engine API
-   3. Create a Google Compute Instance.
-   4. Add mechanism to pass in values into the module for `zone`, `image`, `google_org_id`, and `machine_type` on the instance's Terraform definition.
-   5. Add mechanism to expose `project_id `, `instance name`, and `zone` from the module.
-   6. The instance should be created in the `us-central1-a` zone.
-   7. The machine type should be `n1-standard-1`.
-   8. The image should be `debian` based.
-2. Run Terraform commands to verify the module, and to see what resources will be created when applied.
+   1. Add mechanism to pass in values into the module for `zone`, `image`, `google_org_id`, and `machine_type`.
+   2. The value for the `zone` variable should be `us-central1-a`.
+   3. The value for the `machine_type` variable should be `n1-standard-1`.
+   4. The value for the `image` variable should be `debian-cloud/debian-9`.
+   5. The value for the `google_org_id` variable should be `123456789`.
+   6. Create a Google Project called `a-project`.
+   7. Enable Compute Engine API.
+   8. Create a Google Compute Instance with the name `a-compute-instance`.
+   9. Add mechanism to expose `project_id `, `instance name`, and `zone` from the module as outputs.
+
+## Validation
+
+After creating the module, use terraform cli commands to validate the changes.
+
+1. Validate
+2. Plan to see what resources will be created
