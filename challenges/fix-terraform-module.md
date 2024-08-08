@@ -6,7 +6,7 @@ Note: The default workspace is considered production, and any other workspace is
 
 ## Module Requirements
 
-This module meet the following requirements:
+This module should meet the following requirements:
 
 - Have variables for the `location` (string) and `google_org_id` (string), values should be:
   - `location` = "us-central1"
