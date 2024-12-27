@@ -1,34 +1,4 @@
 {
   "name": "My Codespace",
   "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu-20.04",
-  "features": {
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "16"
-    },
-    "ghcr.io/devcontainers/features/python:1": {
-      "version": "3.9"
-    },
-    "ghcr.io/devcontainers/features/docker-in-docker:1": {
-      "version": "latest"
-    }
-  },
-  "postCreateCommand": [
-    "apt-get update && apt-get install -y tree",
-    "curl -sSL https://sdk.cloud.google.com | bash",
-    "echo 'source /root/google-cloud-sdk/path.bash.inc' >> ~/.bashrc",
-    "source ~/.bashrc",
-    "apt-get install -y apt-transport-https ca-certificates curl",
-    "curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -",
-    "echo 'deb https://apt.kubernetes.io/ kubernetes-xenial main' | tee -a /etc/apt/sources.list.d/kubernetes.list",
-    "apt-get update && apt-get install -y kubectl"
-  ],
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "hashicorp.terraform",
-        "mads-hartmann.bash-ide-vscode",
-        "dbaeumer.vscode-eslint"
-      ]
-    }
-  }
-}
+ }
