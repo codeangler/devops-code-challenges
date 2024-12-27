@@ -1,13 +1,26 @@
 {
   "name": "Development Environment",
-  "dockerFile": "Dockerfile",
-  "features": {
-      "ghcr.io/devcontainers/features/node:1": {
-          "version": "lts"
-      },
-      "ghcr.io/devcontainers/features/python:1": {
-          "version": "latest"
-      }
+	"image": "mcr.microsoft.com/devcontainers/base:bullseye",  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "latest"
+    },
+    "ghcr.io/dhoeric/features/google-cloud-cli:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/terraform:1": {
+      "version": "latest"
+
+    },
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
+      "version": "latest"
+
+    },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "version": "latest"
+    }
   },
   "customizations": {
       "vscode": {
@@ -26,6 +39,6 @@
         }
       }
   },
-  "postCreateCommand": "apt-get update",
+  "postCreateCommand": "echo 'you did it'",
   "remoteUser": "vscode"
 }
