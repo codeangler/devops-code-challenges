@@ -10,9 +10,6 @@
     },
     "ghcr.io/devcontainers/features/docker-in-docker:1": {
       "version": "latest"
-    },
-    "ghcr.io/devcontainers/features/minikube:1": {
-      "version": "latest"
     }
   },
   "postCreateCommand": [
