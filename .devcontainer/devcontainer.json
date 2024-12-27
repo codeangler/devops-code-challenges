@@ -7,6 +7,12 @@
     },
     "ghcr.io/devcontainers/features/python:1": {
       "version": "3.9"
+    },
+    "ghcr.io/devcontainers/features/docker-in-docker:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/minikube:1": {
+      "version": "latest"
     }
   },
   "postCreateCommand": [
@@ -18,5 +24,14 @@
     "curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -",
     "echo 'deb https://apt.kubernetes.io/ kubernetes-xenial main' | tee -a /etc/apt/sources.list.d/kubernetes.list",
     "apt-get update && apt-get install -y kubectl"
-  ]
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "hashicorp.terraform",
+        "mads-hartmann.bash-ide-vscode",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
 }
