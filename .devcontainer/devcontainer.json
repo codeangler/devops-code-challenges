@@ -1,4 +1,27 @@
 {
-  "name": "My Codespace",
-  "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu-20.04",
- }
+  "name": "Development Environment",
+  "dockerFile": "Dockerfile",
+  "features": {
+      "ghcr.io/devcontainers/features/node:1": {
+          "version": "lts"
+      },
+      "ghcr.io/devcontainers/features/python:1": {
+          "version": "latest"
+      }
+  },
+  "customizations": {
+      "vscode": {
+          "extensions": [
+              "ms-python.python",
+              "dbaeumer.vscode-eslint",
+              "esbenp.prettier-vscode"
+          ],
+
+          "settings": {
+            "terminal.integrated.defaultProfile.linux": "bash"
+        }
+      }
+  },
+  "postCreateCommand": "apt-get update",
+  "remoteUser": "vscode"
+}
